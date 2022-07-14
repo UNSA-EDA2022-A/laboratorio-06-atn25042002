@@ -49,4 +49,5 @@ public class Exercise1 {
         }
         lst.add(p.substring(0, 1));
         return lst;
+    }
 }
