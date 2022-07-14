@@ -18,7 +18,7 @@ public class BST<E extends Comparable<E>> {
         if (actual == null) {
             res = new Node<E>(x);
         } else {
-            // buscamos el lugar para inserción
+            // buscamos el lugar para insercion
             int resC = actual.data.compareTo(x);
             if (resC == 0)
                 return actual;
@@ -56,16 +56,16 @@ public class BST<E extends Comparable<E>> {
 
     // Elimina el menor de la izquierda de un nodo
     protected Node<E> minRemove(Node<E> actual) {
-        if (actual.left != null) { // busca el mínimo
+        if (actual.left != null) { // busca el minimo
             actual.left = minRemove(actual.left);
-        } else { // elimina el mínimo
+        } else { // elimina el minimo
             actual = actual.right;
         }
         return actual;
     }
 
     protected Node<E> minRecover(Node<E> actual) {
-        if (actual.left == null) { // busca el mínimo
+        if (actual.left == null) { // busca el minimo
             return actual;
         }
         return minRecover(actual.left);
