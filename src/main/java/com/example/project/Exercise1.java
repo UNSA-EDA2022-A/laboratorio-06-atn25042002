@@ -47,5 +47,6 @@ public class Exercise1 {
             lst.add(p.substring(0, p.indexOf(" ")));
             p= p.substring(p.indexOf(" ")+ 1);
         }
+        return lst;
     }
 }
