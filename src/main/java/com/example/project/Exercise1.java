@@ -21,7 +21,14 @@ public class Exercise1 {
 
 
     public <T extends Comparable<T>> boolean bstSimilares(BST<T> a1, BST<T> a2){
+        if(a1.root().data().compareTo(a2.root().data())==0)
+            return bstSimilares(a1.root().left(), a2.root().left()) && bstSimilares(a1.root().right(), a2.root().right());
+        return false;
+    }
 
+    public <T extends Comparable<T>> boolean NodeSimilares(Node<T> n1, Node<T> n2){
+        if(n1.data().compareTo(n2.data())==0)
+            return NodeSimilares(n1.left(), n2.left()) && bstSimilares(n1.right(), n2.right());
         return false;
     }
 }
