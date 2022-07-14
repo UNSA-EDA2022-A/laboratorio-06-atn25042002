@@ -26,9 +26,11 @@ public class Exercise3 {
         ArrayList<String> r= new ArrayList<String>();
         r.add(lst.get(0));
         r.add(lst.get(1));
+        int n= 0;
         for(int i= 2; i<lst.size(); i++){
             r.add(lst.get(i));
-            if(lst.get(i-2).compareTo(lst.get(i-1))> 0 && lst.get(i).compareTo(lst.get(i-2))> 0){
+            n= r.size()-1;
+            if(r.get(n-2).compareTo(lst.get(n-1))> 0 && lst.get(n).compareTo(lst.get(n-2))> 0){
                 r.remove(r.size()-1);
                 r.remove(r.size()-1);
             }
