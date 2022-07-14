@@ -1,5 +1,5 @@
-import java.util.ArrayList;
 package com.example.project;
+import java.util.ArrayList;
 
 public class Exercise3 {
 
