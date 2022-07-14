@@ -35,7 +35,7 @@ public class Exercise3 {
                 r.add(lst.get(i));
             }
         }
-        return r.size()==0;
+        return r.size()==1;
     }
     
     public static ArrayList<String> lista(String p){
