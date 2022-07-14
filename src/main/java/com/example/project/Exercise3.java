@@ -30,7 +30,7 @@ public class Exercise3 {
         for(int i= 2; i<lst.size(); i++){
             r.add(lst.get(i));
             n= r.size()-1;
-            if(r.get(n-2).compareTo(lst.get(n-1))> 0 && lst.get(n).compareTo(lst.get(n-2))> 0){
+            if(r.get(n-2).compareTo(r.get(n-1))> 0 && r.get(n).compareTo(r.get(n-2))> 0){
                 r.remove(r.size()-1);
                 r.remove(r.size()-1);
             }
