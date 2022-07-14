@@ -32,7 +32,7 @@ public class Exercise1 {
                 hash.put(lst1.get(i), lst2.get(i));
             }
         }
-        ArrayList<String> lstpre1= lista(a2.preOrder());
+        ArrayList<String> lstpre1= lista(a1.preOrder());
         ArrayList<String> lstpre2= lista(a2.preOrder());
         for (int i= 0; i< lstpre1.size(); i++) {
             if(!lstpre2.get(i).equals(hash.get(lstpre1.get(i))))
