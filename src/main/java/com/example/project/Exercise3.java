@@ -20,10 +20,10 @@ public class Exercise3 {
 
 
     public <T extends Comparable<T>> boolean bstEstrictamenteBinario(BST<T> a){
-        ArrayList<String> lst= lista(a.preOrder());
-        if(a.size % 2==0 || lst.size()== 1)
+        /*ArrayList<String> lst= lista(a.preOrder());
+        if(a.size % 2==0 || lst.size()== 1)*/
             return false;
-        ArrayList<String> r= new ArrayList<String>();
+        /*ArrayList<String> r= new ArrayList<String>();
         r.add(lst.get(0));
         r.add(lst.get(1));
         for(int i= 2; i<lst.size(); i++){
@@ -35,7 +35,7 @@ public class Exercise3 {
                 r.add(lst.get(i));
             }
         }
-        return r.size()==0;
+        return r.size()==0;*/
     }
     
     public static ArrayList<String> lista(String p){
