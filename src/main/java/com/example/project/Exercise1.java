@@ -43,10 +43,10 @@ public class Exercise1 {
 
     public static ArrayList<String> lista(String p){
         ArrayList<String> lst= new ArrayList<String>();
-        while(!p.equals(" ") && p.length()>0){
+        while(p.length()>2){
             lst.add(p.substring(0, p.indexOf(" ")));
             p= p.substring(p.indexOf(" ")+ 1);
         }
+        lst.add(p.substring(0, 1));
         return lst;
-    }
 }
