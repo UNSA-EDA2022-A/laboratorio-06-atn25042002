@@ -43,7 +43,7 @@ public class Exercise1 {
 
     public static ArrayList<String> lista(String p){
         ArrayList<String> lst= new ArrayList<String>();
-        while(!p.equals(" ")){
+        while(!p.equals(" ") && p.length()>0){
             lst.add(p.substring(0, p.indexOf(" ")));
             p= p.substring(p.indexOf(" ")+ 1);
         }
