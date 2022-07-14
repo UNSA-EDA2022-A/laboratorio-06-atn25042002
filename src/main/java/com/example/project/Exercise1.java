@@ -1,4 +1,6 @@
 package com.example.project;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Exercise1 {
 
