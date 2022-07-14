@@ -29,7 +29,6 @@ public class Exercise3 {
         for(int i= 2; i<lst.size(); i++){
             if(lst.get(i-2).compareTo(lst.get(i-1))> 0 && lst.get(i).compareTo(lst.get(i-2))> 0){
                 r.remove(r.size()-1);
-                r.remove(r.size()-1);
             }
             else{
                 r.add(lst.get(i));
