@@ -43,11 +43,9 @@ public class Exercise1 {
 
     public static ArrayList<String> lista(String p){
         ArrayList<String> lst= new ArrayList<String>();
-        while(p.length()>2){
+        while(p.indexOf(" ")>= 0){
             lst.add(p.substring(0, p.indexOf(" ")));
             p= p.substring(p.indexOf(" ")+ 1);
         }
-        lst.add(p.substring(0, 1));
-        return lst;
     }
 }
