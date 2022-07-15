@@ -20,7 +20,7 @@ public class Exercise3 {
 
     public <T extends Comparable<T>> boolean bstEstrictamenteBinario(BST<T> a){
         ArrayList<String> lst= lista(a.preOrder());
-        if(lst.size() % 2==0 || lst.size()== 1)
+        if(lst.size() % 2==0)
             return false;
         return revisar(lst);
     }
