@@ -18,24 +18,27 @@ public class Exercise3 {
         
     }
 
-
     public <T extends Comparable<T>> boolean bstEstrictamenteBinario(BST<T> a){
         ArrayList<String> lst= lista(a.preOrder());
         if(lst.size() % 2==0 || lst.size()== 1)
             return false;
-        ArrayList<String> r= new ArrayList<String>();
-        r.add(lst.get(0));
-        r.add(lst.get(1));
-        int n= 0;
-        for(int i= 2; i<lst.size(); i++){
-            r.add(lst.get(i));
-            n= r.size()-1;
-            if(r.get(n-2).compareTo(r.get(n-1))> 0 && r.get(n).compareTo(r.get(n-2))>= 0){
-                r.remove(r.size()-1);
-                r.remove(r.size()-1);
-            }
+        revisar(lst);
+    }
+
+    public static boolean revisar( ArrayList<String> lst){
+        if(lst.size()==1)
+            return true;
+        ArrayList<String> lst1= new ArrayList<String>();
+        ArrayList<String> lst2= new ArrayList<String>();
+        for (String str : lst) {
+            if(str.compareTo(lst.get(0))< 0)
+                lst1.add(str);
+            else
+                lst2.add(str);
         }
-        return r.size()==1;
+        if(lst2.isEmpty())
+            return false;  
+        return revisar(lst1) && revisar(lst2);
     }
     
     public static ArrayList<String> lista(String p){
