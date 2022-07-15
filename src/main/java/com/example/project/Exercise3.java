@@ -22,7 +22,7 @@ public class Exercise3 {
         ArrayList<String> lst= lista(a.preOrder());
         if(lst.size() % 2==0 || lst.size()== 1)
             return false;
-        revisar(lst);
+        return revisar(lst);
     }
 
     public static boolean revisar( ArrayList<String> lst){
