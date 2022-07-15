@@ -1,4 +1,6 @@
 package com.example.project;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Exercise1 {
 
@@ -19,9 +21,32 @@ public class Exercise1 {
         
     }
 
-
     public <T extends Comparable<T>> boolean bstSimilares(BST<T> a1, BST<T> a2){
+        ArrayList<String> lst1= lista(a1.postOrder());
+        ArrayList<String> lst2= lista(a2.postOrder());
+        HashMap<String, String> hash= new HashMap<String, String>(); //Asocia cada elemento de los BST en postorden
+        if (lst1.size() != lst2.size())
+            return false;
+        else{
+            for (int i= 0; i< lst1.size(); i++) {
+                hash.put(lst1.get(i), lst2.get(i));
+            }
+        }
+        ArrayList<String> lstpre1= lista(a1.preOrder());
+        ArrayList<String> lstpre2= lista(a2.preOrder());
+        for (int i= 0; i< lstpre1.size(); i++) { //Verifica que cada elemento del segun BST en preorden coincida con el del
+            if(!lstpre2.get(i).equals(hash.get(lstpre1.get(i))))  // primer BST
+                return false;
+        }
+        return true; //Si cumple que cada elemento cumplio
+    }
 
-        return false;
+    public static ArrayList<String> lista(String p){ //Convierte un texto con separadores en un ArrayList
+        ArrayList<String> lst= new ArrayList<String>();
+        while(p.indexOf(" ")>= 0){
+            lst.add(p.substring(0, p.indexOf(" ")));
+            p= p.substring(p.indexOf(" ")+ 1);
+        }
+        return lst;
     }
 }
