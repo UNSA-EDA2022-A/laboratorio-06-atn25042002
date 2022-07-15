@@ -24,7 +24,7 @@ public class Exercise1 {
     public <T extends Comparable<T>> boolean bstSimilares(BST<T> a1, BST<T> a2){
         ArrayList<String> lst1= lista(a1.postOrder());
         ArrayList<String> lst2= lista(a2.postOrder());
-        HashMap<String, String> hash= new HashMap<String, String>();
+        HashMap<String, String> hash= new HashMap<String, String>(); //Asocia cada elemento de los BST en postorden
         if (lst1.size() != lst2.size())
             return false;
         else{
@@ -34,14 +34,14 @@ public class Exercise1 {
         }
         ArrayList<String> lstpre1= lista(a1.preOrder());
         ArrayList<String> lstpre2= lista(a2.preOrder());
-        for (int i= 0; i< lstpre1.size(); i++) {
-            if(!lstpre2.get(i).equals(hash.get(lstpre1.get(i))))
+        for (int i= 0; i< lstpre1.size(); i++) { //Verifica que cada elemento del segun BST en preorden coincida con el del
+            if(!lstpre2.get(i).equals(hash.get(lstpre1.get(i))))  // primer BST
                 return false;
         }
-        return true;
+        return true; //Si cumple que cada elemento cumplio
     }
 
-    public static ArrayList<String> lista(String p){
+    public static ArrayList<String> lista(String p){ //Convierte un texto con separadores en un ArrayList
         ArrayList<String> lst= new ArrayList<String>();
         while(p.indexOf(" ")>= 0){
             lst.add(p.substring(0, p.indexOf(" ")));
