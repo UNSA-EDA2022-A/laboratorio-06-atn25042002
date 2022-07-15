@@ -30,7 +30,9 @@ public class Exercise3 {
             return true;
         ArrayList<String> lst1= new ArrayList<String>();
         ArrayList<String> lst2= new ArrayList<String>();
-        for (String str : lst) {
+        String str;
+        for (int i= 1; i< lst.size(); i++) {
+            str= lst.get(i);
             if(str.compareTo(lst.get(0))< 0)
                 lst1.add(str);
             else
