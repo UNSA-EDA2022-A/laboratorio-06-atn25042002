@@ -21,6 +21,6 @@ public class Exercise2 {
 
 
     public <T extends Comparable<T>> boolean bstIguales(BST<T> a1, BST<T> a2){
-        return a1.preOrder().equals(a2.preOrder());
+        return a1.preOrder().equals(a2.preOrder()); //Si el preorden es igual los BST son los mismos
     }
 }
